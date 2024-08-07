@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Alina Kubrak](https://up.htmlacademy.ru/adaptive/32/user/2516969).
-* Наставник: `Ирина Антипина`.
+* Наставник: [Ирина Антипина](https://htmlacademy.ru/profile/id2108789).
 
 ---
 
