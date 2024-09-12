@@ -2,7 +2,26 @@ header {
   font-style: 20px;
   line-height: 20px;
   background-color: #ffffff;
+  padding: 13px 20px 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
 }
+
+.header__logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    width: 174px;
+    padding-bottom: 0;
+    justify-content: space-between;
+  }
+}
+
 
 .header__logo-link:hover {
   opacity: 0.8;
@@ -10,4 +29,10 @@ header {
 
 .header__logo-link:focus {
   opacity: 0.6;
+}
+
+.header__nav {
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+  }
 }

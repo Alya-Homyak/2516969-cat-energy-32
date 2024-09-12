@@ -3,6 +3,7 @@
 body {
   font-family: "Oswald", sans-serif;
   color: #000000;
+  margin: 0;
 }
 
 a {
@@ -20,4 +21,10 @@ a {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+img {
+  object-fit: contain;
+  max-width: 100%;
+  height: auto;
 }
