@@ -1,3 +1,12 @@
+.nav {
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    left: 0;
+  }
+}
+
 .nav__list {
   list-style: none;
   padding: 0;

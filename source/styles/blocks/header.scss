@@ -7,6 +7,16 @@ header {
   @media (min-width: $tablet-width) {
     display: flex;
   }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: transparent;
+    padding: 55px 110px 0;
+  }
 }
 
 .header__logo {
