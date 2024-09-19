@@ -1,11 +1,24 @@
 .example {
   background-color: #eaeaea;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
 }
 
 .example__title {
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
+  grid-column: 1/3;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+  }
 }
 
 .example__description {
@@ -13,23 +26,79 @@
   font-size: 14px;
   line-height: 18px;
   color: $text-color;
+  grid-column: 1/3;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+  }
+}
+
+.example__results-list {
+  display: flex;
+  grid-column: 1/3;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/2;
+  }
 }
 
 .example__number {
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
+
 
 .example__number-description {
   font-family: "Lato", sans-serif;
   font-size: 12px;
   line-height: 12px;
   color: $text-color;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
 
 .example__price {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
+  grid-column: 1/3;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+}
+
+.example__pictures {
+  display: flex;
+  grid-column: 1/3;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2/3;
+    grid-row: 1/5;
+  }
 }

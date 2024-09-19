@@ -2,6 +2,12 @@
 .programs__list {
   text-decoration: none;
   list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
 }
 
 
@@ -15,6 +21,11 @@
   text-transform: uppercase;
   font-weight: 400;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .program__text {
@@ -22,6 +33,12 @@
   font-style: 14px;
   line-height: 18px;
   color: $text-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    color: $main-text-color;
+  }
 }
 
 .program__link {
@@ -30,6 +47,11 @@
   text-transform: uppercase;
   color: inherit;
   display: flex;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 29.6px;
+  }
 }
 
 .program__link::after {
@@ -42,15 +64,95 @@
   height: 12px;
 }
 
+@media (max-width: $mobile-width-only) {
+  .program {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
 
-.program--lose-weight {
-  background-image: url("../../icons/stack.svg#slim-cat");
-  background-size: 50px 53px;
-  background-repeat: no-repeat;
+  .program--lose-weight::after {
+    content: "";
+    display: block;
+    background-image: url("../../icons/stack.svg#slim-cat");
+    background-size: 50px 53px;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 53px;
+    position: absolute;
+  }
+
+  .program--gain-weight::after {
+    content: "";
+    display: block;
+    background-image: url("../../icons/stack.svg#pro-cat");
+    background-size: 67px 50px;
+    background-repeat: no-repeat;
+    width: 67px;
+    height: 50px;
+    position: absolute;
+  }
 }
 
-.program--gain-weight {
-  background-image: url("../../icons/stack.svg#pro-cat");
-  background-size: 67px 50px;
-  background-repeat: no-repeat;
+
+@media (min-width: $tablet-width) {
+  .program {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 340px;
+  }
+
+  .program--lose-weight::after {
+    content: "";
+    display: block;
+    background-image: url("../../icons/stack.svg#slim-cat");
+    background-size: 200px 211px;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 211px;
+    position: absolute;
+  }
+
+  .program--gain-weight::after {
+    content: "";
+    display: block;
+    background-image: url("../../icons/stack.svg#pro-cat");
+    background-size: 268 200px;
+    background-repeat: no-repeat;
+    width: 268px;
+    height: 200px;
+    position: absolute;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: auto;
+  }
+
+  .program--lose-weight::after {
+    content: "";
+    display: block;
+    background-image: url("../../icons/stack.svg#slim-cat");
+    background-size: 50px 53px;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 53px;
+    position: absolute;
+  }
+
+  .program--gain-weight::after {
+    content: "";
+    display: block;
+    background-image: url("../../icons/stack.svg#pro-cat");
+    background-size: 67px 50px;
+    background-repeat: no-repeat;
+    width: 67px;
+    height: 50px;
+    position: absolute;
+  }
 }
