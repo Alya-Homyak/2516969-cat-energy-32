@@ -10,7 +10,7 @@
   background-size: cover;
   background-position: center;
   height: 300px;
-  margin: 0 -20px 198px;
+  margin: 0 0 198px;
 
   @media (min-width: $tablet-width) {
     background-color: #ffffff;
@@ -31,7 +31,7 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
-  margin: 0 0 30px;
+  margin: 0 20px 30px;
   padding-top: 22px;
 
   @media (min-width: $tablet-width) {
