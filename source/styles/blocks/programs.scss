@@ -1,6 +1,10 @@
 
 .programs {
   margin: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 30px;
+  }
 }
 
 .programs__list {
@@ -12,11 +16,22 @@
   @media (min-width: $desktop-width) {
     display: flex;
   }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
 }
 
 
 .programs__item {
   background-color: $bg-basic-grey;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    min-height: 242px;
+    padding: 77px 0 53px 53px;
+    margin-bottom: 30px;
+  }
 }
 
 
@@ -31,6 +46,8 @@
   @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    margin: 0 0 24px;
+    text-align: left;
   }
 }
 
@@ -46,6 +63,9 @@
     font-size: 16px;
     line-height: 24px;
     color: $main-text-color;
+    padding: 0;
+    margin: 0 0 48px;
+    border: none;
   }
 }
 
@@ -60,6 +80,7 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 29.6px;
+    align-items: center;
   }
 }
 
@@ -71,6 +92,10 @@
   background-repeat: no-repeat;
   width: 24px;
   height: 12px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 4px 25px;
+  }
 }
 
 @media (max-width: $mobile-width-only) {
@@ -81,6 +106,7 @@
     padding: 20px;
     margin-bottom: 22px;
   }
+
 
   .program--lose-weight::after {
     content: "";
@@ -114,30 +140,33 @@
   .program {
     display: flex;
     flex-direction: column;
-    position: relative;
     width: 340px;
   }
 
   .program--lose-weight::after {
     content: "";
     display: block;
-    background-image: url("../../icons/stack.svg#slim-cat");
+    background-image: url("../../icons/stack.svg#slim-cat-tablet");
     background-size: 200px 211px;
     background-repeat: no-repeat;
     width: 200px;
     height: 211px;
     position: absolute;
+    right: 63px;
+    top: 81px;
   }
 
   .program--gain-weight::after {
     content: "";
     display: block;
-    background-image: url("../../icons/stack.svg#pro-cat");
+    background-image: url("../../icons/stack.svg#pro-cat-tablet");
     background-size: 268 200px;
     background-repeat: no-repeat;
     width: 268px;
     height: 200px;
     position: absolute;
+    right: 29px;
+    top: 91px;
   }
 }
 

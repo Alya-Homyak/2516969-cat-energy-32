@@ -134,18 +134,19 @@
           </dd>
         </div>
       </dl>
-      <p class="example__price">
-        Затраты на питание: 15 000 РУБ.
-      </p>
+      <div class="example__price">
+        <span class="example__price-text">Затраты на питание:</span>
+        <span class="example__price-price">15 000 РУБ.</span>
+      </div>
       <div class="example__pictures">
         <ul class="example__pictures-list">
-          <li class="example__pictures-item">
+          <li class="example__pictures-item example__pictures-item-before">
             <picture>
               <source type="image/png" media="(min-width: 768px)" srcset="images/cat-before-tablet@1x.png 1x, images/cat-before-tablet@2x.png 2x" width="560" height="512">
               <img class="example__picture-before" width="280" height="256" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" alt="Толстый кот">
             </picture>
           </li>
-          <li class="example__pictures-item">
+          <li class="example__pictures-item example__pictures-item-after">
             <picture>
               <source type="image/png" media="(min-width: 768px)" srcset="images/cat-after-tablet@1x.png 1x, images/cat-after-tablet@2x.png 2x" width="560" height="512">
               <img class="example__picture-after" width="280" height="256" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" alt="Худой кот">
@@ -161,12 +162,15 @@
     <section class="location">
       <h2 class="visually-hidden">расположение</h2>
       <div class="location__content">
-        <p class="location__text">
-          приглашаем к сотрудничеству дилеров!
-        </p>
-        <p class="location__information">
-          ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-        </p>
+        <div class="location__text-content">
+          <p class="location__text">
+            приглашаем к сотрудничеству дилеров!
+          </p>
+          <p class="location__information">
+            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+          </p>
+        </div>
+
         <iframe class="location__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.6509364418184!2d30.322403669718415!3d59.938717170226475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRltGPLCAxOTExODY!5e0!3m2!1suk!2spl!4v1727110648556!5m2!1suk!2spl" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
