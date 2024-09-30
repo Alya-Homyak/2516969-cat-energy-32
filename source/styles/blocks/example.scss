@@ -16,6 +16,15 @@
     padding: 0 30px 100px;
     margin-bottom: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 560px;
+    grid-template-rows: 205px auto auto auto auto;
+    column-gap: 224px;
+    padding: 62px 110px 75px;
+    background-size: 100% 462px;
+  }
 }
 
 .example__title {
@@ -34,6 +43,8 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 1/2;
+    grid-row: 1;
+    margin: 0;
   }
 }
 
@@ -53,6 +64,8 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 1/2;
+    grid-row: 2;
+    margin-bottom: 39px;
   }
 }
 
@@ -69,6 +82,12 @@
     grid-column: 1/2;
     margin: 0;
     column-gap: 43px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-row: 3;
+    justify-content: space-between;
+    padding-right: 70px;
   }
 }
 
@@ -124,6 +143,12 @@
     transform: translateX(-50%);
     background-color: #ffffff;
   }
+
+  @media (min-width: $desktop-width) {
+    background-color: #eaeaea;
+    bottom: 25px;
+    left: 80px;
+  }
 }
 
 .example__price {
@@ -151,6 +176,13 @@
   @media (min-width: $desktop-width) {
     grid-column: 1/2;
     grid-row: 4/5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding: 0;
+    padding-right: 110px;
   }
 }
 
@@ -158,16 +190,18 @@
   position: relative;
   margin: 0 auto;
 
-  @media (min-width: $desktop-width) {
-    grid-column: 2/3;
-    grid-row: 1/5;
-    display: flex;
-  }
-
   @media (min-width: $tablet-width) {
     width: 560px;
     grid-column: 1/3;
     margin: 104px auto 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2/3;
+    grid-row: 1/5;
+    display: flex;
+    margin: 0;
+    padding-bottom: 10px;
   }
 }
 

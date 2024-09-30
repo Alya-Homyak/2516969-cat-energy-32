@@ -19,6 +19,8 @@ header {
     left: 0;
     background-color: transparent;
     padding: 55px 110px 0;
+    z-index: 2;
+    height: auto;
   }
 }
 
@@ -32,6 +34,10 @@ header {
     width: 174px;
     padding-bottom: 0;
     justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
   }
 }
 

@@ -5,6 +5,10 @@
   @media (min-width: $tablet-width) {
     margin: 0 30px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 110px 71px;
+  }
 }
 
 .programs__list {
@@ -18,7 +22,9 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 45px;
+    margin: 0;
+    padding: 0;
+    column-gap: 80px;
   }
 }
 
@@ -31,6 +37,13 @@
     min-height: 242px;
     padding: 77px 0 53px 53px;
     margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 77px 53px 55px;
+    margin-bottom: 0;
+    width: 50%;
+    position: relative;
   }
 }
 
@@ -49,6 +62,11 @@
     margin: 0 0 24px;
     text-align: left;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 162px;
+    margin-bottom: 73px;
+  }
 }
 
 .program__text {
@@ -66,6 +84,10 @@
     padding: 0;
     margin: 0 0 48px;
     border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 22px;
   }
 }
 
@@ -98,8 +120,8 @@
   }
 }
 
-@media (max-width: $mobile-width-only) {
-  .program {
+.program {
+  @media (max-width: $mobile-width-only) {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -107,96 +129,77 @@
     margin-bottom: 22px;
   }
 
-
-  .program--lose-weight::after {
-    content: "";
-    display: block;
-    background-image: url("../../icons/stack.svg#slim-cat");
-    background-size: 50px 53px;
-    background-repeat: no-repeat;
-    width: 50px;
-    height: 53px;
-    position: absolute;
-    top: 21px;
-    left: 20px;
-  }
-
-  .program--gain-weight::after {
-    content: "";
-    display: block;
-    background-image: url("../../icons/stack.svg#pro-cat");
-    background-size: 67px 50px;
-    background-repeat: no-repeat;
-    width: 67px;
-    height: 50px;
-    position: absolute;
-    top: 24px;
-    left: 13px;
-  }
-}
-
-
-@media (min-width: $tablet-width) {
-  .program {
-    display: flex;
-    flex-direction: column;
+  @media (min-width: $tablet-width) {
     width: 340px;
   }
 
-  .program--lose-weight::after {
-    content: "";
-    display: block;
-    background-image: url("../../icons/stack.svg#slim-cat-tablet");
-    background-size: 200px 211px;
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 211px;
-    position: absolute;
-    right: 63px;
-    top: 81px;
-  }
-
-  .program--gain-weight::after {
-    content: "";
-    display: block;
-    background-image: url("../../icons/stack.svg#pro-cat-tablet");
-    background-size: 268 200px;
-    background-repeat: no-repeat;
-    width: 268px;
-    height: 200px;
-    position: absolute;
-    right: 29px;
-    top: 91px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .program {
+  @media (min-width: $desktop-width) {
     display: flex;
     flex-direction: column;
     position: relative;
     width: auto;
   }
+}
 
-  .program--lose-weight::after {
-    content: "";
-    display: block;
-    background-image: url("../../icons/stack.svg#slim-cat");
-    background-size: 50px 53px;
-    background-repeat: no-repeat;
-    width: 50px;
-    height: 53px;
-    position: absolute;
+.program--lose-weight::after {
+  content: "";
+  display: block;
+  background-image: url("../../icons/stack.svg#slim-cat");
+  background-size: 50px 53px;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 53px;
+  position: absolute;
+  top: 21px;
+  left: 20px;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../../icons/stack.svg#slim-cat-tablet");
+    background-size: 200px 211px;
+    width: 200px;
+    height: 211px;
+    right: 63px;
+    top: 81px;
   }
 
-  .program--gain-weight::after {
-    content: "";
-    display: block;
-    background-image: url("../../icons/stack.svg#pro-cat");
-    background-size: 67px 50px;
+  @media (min-width: $desktop-width) {
+    background-image: url("../../icons/stack.svg#slim-cat");
+    background-size: 100px 106px;
     background-repeat: no-repeat;
-    width: 67px;
-    height: 50px;
-    position: absolute;
+    width: 100px;
+    height: 106px;
+    top: -36px;
+    left: 0;
+  }
+}
+
+.program--gain-weight::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-image: url("../../icons/stack.svg#pro-cat");
+  background-size: 67px 50px;
+  width: 67px;
+  height: 50px;
+  top: 24px;
+  left: 13px;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../../icons/stack.svg#pro-cat-tablet");
+    background-size: 268 200px;
+    width: 268px;
+    height: 200px;
+    right: 29px;
+    top: 91px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../../icons/stack.svg#pro-cat");
+    background-size: 134px 100px;
+    width: 134px;
+    height: 100px;
+    top: -30px;
+    left: -18px;
   }
 }
