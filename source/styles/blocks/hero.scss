@@ -4,26 +4,44 @@
   color: #ffffff;
   text-align: center;
 
-  // background-color: $bg-basic-green;
-  // background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), image-set("../../images/index-background-mobile@1x.jpg" 1x type("image/jpeg"), "../../images/index-background-mobile@2x.jpg" 2x type("image/jpeg"));
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // background-position: center;
-  // height: 320px;
-  // margin-bottom: 198px;
+  background-color: $bg-basic-green;
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), image-set("../../images/index-background-mobile@1x.jpg" 1x type("image/jpeg"), "../../images/index-background-mobile@2x.jpg" 2x type("image/jpeg"));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  margin: 0 0 198px;
 
   @media (min-width: $tablet-width) {
     background-color: #ffffff;
     background-image: none;
-    height: 875px;
+    height: 652px;
+    position: relative;
   }
 
   @media (min-width: $desktop-width) {
-    // height: 694px;
-    // background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), image-set("../../images/index-background-mobile@1x.jpg" 1x type("image/jpeg"), "../../images/index-background-mobile@2x.jpg" 2x type("image/jpeg"));
-    // background-repeat: no-repeat;
-    // background-size: 50% 100%;
-    // background-position: right;
+    background-image: none;
+    padding: 224px 190px 0;
+    margin: 0 0 82px;
+    position: relative;
+    height: 694px;
+    box-sizing: border-box;
+  }
+}
+
+.hero::before {
+  @media (min-width: $desktop-width) {
+    content: "";
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), image-set("../../images/index-background-desktop@1x.jpg" 1x type("image/jpeg"), "../../images/index-background-desktop@2x.jpg" 2x type("image/jpeg"));
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 694px;
+    display: block;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
   }
 }
 
@@ -31,18 +49,22 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
-  margin: 0;
+  margin: 0 20px 30px;
+  padding-top: 22px;
 
   @media (min-width: $tablet-width) {
+    color: #000000;
+    text-align: left;
+    width: 442px;
     font-size: 60px;
     line-height: 60px;
-    color: #000000;
+    margin: 0;
+    padding: 40px 0 0 120px;
   }
 
   @media (min-width: $desktop-width) {
-    position: relative;
-    top: 224px;
-    padding-left: 80px;
+    padding: 0;
+    margin: 0 0 40px;
     width: 416px;
   }
 }
@@ -51,23 +73,42 @@
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+  margin-bottom: 30px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
     color: #000000;
+    text-align: left;
+    margin: 0;
+    padding: 40px 0 21px 120px;
   }
 
   @media (min-width: $desktop-width) {
-    position: relative;
-    top: 224px;
-    padding-left: 80px;
+    padding: 0;
     width: 416px;
   }
 }
 
 .hero__img {
   @media (min-width: $desktop-width) {
-    position: relative;
+    position: absolute;
+    top: 144px;
+    left: 558px;
+  }
+}
+
+.hero__button {
+  @media ($tablet-width <= width < $desktop-width) {
+    position: absolute;
+    top: 270px;
+    left: 120px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 244px;
+    position: absolute;
+    bottom: 184px;
+    left: 190px;
   }
 }

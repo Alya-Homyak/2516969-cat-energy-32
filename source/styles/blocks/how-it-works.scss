@@ -1,7 +1,24 @@
+.how-it-works {
+  padding: 0 20px;
+  counter-set: number;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px 38px;
+    margin-bottom: 44px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+    border-bottom: none;
+  }
+}
+
 .how-it-works__title {
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
+  margin: 0 0 40px;
 
   @media (min-width: $tablet-width) {
     font-size: 60px;
@@ -16,79 +33,131 @@
   color: $text-color;
   display: flex;
   margin-bottom: 20px;
+  align-items: center;
+  counter-increment: number;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-right: 56px;
+    align-items: start;
+  }
+
+  @media (min-width: $tablet-width) {
+
+    padding-right: 12px;
+  }
+}
+
+.how-it-works__item::before {
+  content: "";
+  box-sizing: border-box;
+  flex-shrink: 0;
+  margin-right: 20px;
+  background-size: 30px 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 60px;
+  height: 60px;
+  background-color: $bg-basic-green;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 31px;
+  }
+}
+
+.how-it-works__item::after {
+  @media (min-width: $tablet-width) {
+    content: counter(number);
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: auto;
+    font-family: "Oswald", sans-serif;
+    font-size: 280px;
+    line-height: 1;
+    font-weight: 400;
+    color: #f2f2f2;
+    position: absolute;
+    z-index: -1;
+    top: -8px;
   }
 }
 
 .how-it-works__item--healthy::before {
-  content: "";
-  box-sizing: border-box;
-  flex-shrink: 0;
-  margin-right: 20px;
   background-image: url("../../icons/stack.svg#icon-leaf");
-  background-size: 30px 32px;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 60px;
-  height: 60px;
-  background-color: $bg-basic-green;
 }
 
-.how-it-works__item--powder::before {
-  content: "";
-  box-sizing: border-box;
-  flex-shrink: 0;
-  margin-right: 20px;
-  background-image: url("../../icons/stack.svg#icon-boil");
-  background-size: 30px 32px;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 60px;
-  height: 60px;
-  background-color: $bg-basic-green;
-}
+.how-it-works__item--healthy::after {
+  @media (min-width: $tablet-width) {
+    right: 100px;
+  }
 
-.how-it-works__item--cutlery::before {
-  content: "";
-  box-sizing: border-box;
-  flex-shrink: 0;
-  margin-right: 20px;
-  background-image: url("../../icons/stack.svg#icon-eat");
-  background-size: 30px 32px;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 60px;
-  height: 60px;
-  background-color: $bg-basic-green;
-}
-
-.how-it-works__item--clock::before {
-  content: "";
-  box-sizing: border-box;
-  flex-shrink: 0;
-  margin-right: 20px;
-  background-image: url("../../icons/stack.svg#icon-clock");
-  background-size: 30px 32px;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 60px;
-  height: 60px;
-  background-color: $bg-basic-green;
-}
-
-@media (min-width: $tablet-width) {
-  .how-it-works__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 280px 280px;
+  @media (min-width: $desktop-width) {
+    right: 40px;
   }
 }
 
-@media (min-width: $desktop-width) {
-  .how-it-works__list {
+.how-it-works__item--powder::before {
+  background-image: url("../../icons/stack.svg#icon-boil");
+}
+
+.how-it-works__item--powder::after {
+  @media (min-width: $tablet-width) {
+    right: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 16px;
+  }
+}
+
+.how-it-works__item--cutlery::before {
+  background-image: url("../../icons/stack.svg#icon-eat");
+}
+
+.how-it-works__item--cutlery::after {
+  @media (min-width: $tablet-width) {
+    right: 76px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 8px;
+  }
+}
+
+.how-it-works__item--clock::before {
+  background-image: url("../../icons/stack.svg#icon-clock");
+}
+
+.how-it-works__item--clock::after {
+  @media (min-width: $tablet-width) {
+    right: 76px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: -4px;
+  }
+}
+
+.how-it-works__list {
+  margin: 0 0 48px;
+  padding-left: 0;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 280px 280px;
+    gap: 37px 60px;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
     display: flex;
   }
 }

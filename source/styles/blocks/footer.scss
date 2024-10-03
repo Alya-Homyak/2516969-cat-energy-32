@@ -1,21 +1,63 @@
 footer {
   background-color: #f2f2f2;
   text-align: center;
+  height: 260px;
+  box-sizing: border-box;
+  padding: 40px 20px;
 
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
     padding: 55px 30px;
+    height: 147px;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 66px 110px;
+    align-items: center;
+    height: auto;
   }
 }
 
+.footer__logo-name {
+  padding-bottom: 14px;
+  border-bottom: 1px solid #d9d9d9;
+  display: block;
+  width: auto;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    border-bottom: none;
+    align-self: end;
+  }
+}
+
+.footer__social-media {
+  display: block;
+  box-sizing: border-box;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #d9d9d9;
+  width: auto;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    border-bottom: none;
+  }
+}
 
 .footer__social-list {
-  display: flex;
-  list-style: none;
-  width: 132px;
+  padding: 4px 74px 0;
   justify-content: space-between;
-  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin: 0 0 0 36px;
+    column-gap: 24px;
+  }
 }
 
 .footer__social-link {
@@ -52,10 +94,22 @@ footer {
 .footer__copyright {
   display: flex;
   justify-content: space-between;
+  height: 34px;
+  width: auto;
+  margin-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .footer__copyright-link {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
   color: $text-color;
+  align-self: center;
 }
 
 .footer__copyright-logo {
@@ -65,8 +119,12 @@ footer {
 .footer__copyright-logo::after {
   content: "";
   background-image: url("../../icons/stack.svg#icon-html-academy");
-  background-size: 28px 22px;
+  background-size: 27px 34px;
   background-repeat: no-repeat;
-  width: 28px;
-  height: 22px;
+  width: 27px;
+  height: 34px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 23px;
+  }
 }
