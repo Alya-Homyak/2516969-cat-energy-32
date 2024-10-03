@@ -53,6 +53,11 @@
   }
 }
 
+.nav__link-catalog {
+  color: #111111;
+}
+
+
 .nav__item:nth-last-child(-n+1) {
   margin-right: 6px;
 
@@ -69,6 +74,10 @@
   @media (min-width: $desktop-width) {
     border-bottom: solid 2px #ffffff;
   }
+}
+
+.nav__link-catalog--current {
+  border-bottom: 2px solid $bg-basic-green;
 }
 
 .header__nav-button {

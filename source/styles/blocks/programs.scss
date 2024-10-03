@@ -3,7 +3,7 @@
   margin: 0 20px;
 
   @media (min-width: $tablet-width) {
-    margin: 0 30px;
+    margin: 0 30px 45px;
   }
 
   @media (min-width: $desktop-width) {
@@ -43,7 +43,6 @@
     padding: 77px 53px 55px;
     margin-bottom: 0;
     width: 50%;
-    position: relative;
   }
 }
 
@@ -134,10 +133,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    display: flex;
-    flex-direction: column;
-    position: relative;
     width: auto;
+    position: static;
   }
 }
 
@@ -160,16 +157,17 @@
     height: 211px;
     right: 63px;
     top: 81px;
+    left: auto;
   }
 
   @media (min-width: $desktop-width) {
-    background-image: url("../../icons/stack.svg#slim-cat");
+    background-image: url("../../icons/stack.svg#slim-cat-desktop");
     background-size: 100px 106px;
     background-repeat: no-repeat;
     width: 100px;
     height: 106px;
-    top: -36px;
-    left: 0;
+    top: 40px;
+    left: 52px;
   }
 }
 
@@ -192,14 +190,15 @@
     height: 200px;
     right: 29px;
     top: 91px;
+    left: auto;
   }
 
   @media (min-width: $desktop-width) {
-    background-image: url("../../icons/stack.svg#pro-cat");
+    background-image: url("../../icons/stack.svg#pro-cat-desktop");
     background-size: 134px 100px;
     width: 134px;
     height: 100px;
-    top: -30px;
-    left: -18px;
+    top: 46px;
+    left: 36px;
   }
 }

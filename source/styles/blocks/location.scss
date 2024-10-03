@@ -1,6 +1,6 @@
 .location {
   margin: 0;
-  padding: 6px 20px 0;
+  padding: 26px 20px 0;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -31,13 +31,14 @@
     column-gap: 308px;
     height: 200px;
     box-sizing: border-box;
+    background-color: #f2f2f2;
   }
 
   @media (min-width: $desktop-width) {
     position: absolute;
     display: flex;
     background-color: #ffffff;
-    padding: 60px 80px;
+    padding: 62px 80px;
     column-gap: 87px;
     box-sizing: border-box;
     width: 565px;
@@ -66,12 +67,17 @@
   line-height: 20px;
   color: $text-color;
   margin: 0;
-  text-align: right;
+  text-align: left;
+  margin-left: 23px;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 20px;
     text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
   }
 }
 
